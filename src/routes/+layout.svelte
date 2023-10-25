@@ -3,9 +3,14 @@
 	import { page } from '$app/stores'
 	import { routes, currentRoute } from '$lib'
 	import Navbar from '../components/Navbar.svelte'
-
-	$currentRoute = $routes.find(route => route.path === $page.route.id)
+	$: $currentRoute = $routes.find(route => route.path === $page.url.pathname)
 </script>
 
-<Navbar/>
-<slot/>
+<svelte:head>
+	<title>{$currentRoute?.name}</title>
+</svelte:head>
+
+<div class="flex">
+	<Navbar/>
+	<slot/>
+</div>

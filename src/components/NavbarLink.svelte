@@ -1,6 +1,6 @@
 <script lang="ts">
-	import type { Route } from '$lib'
+	import { type Route, currentRoute } from '$lib'
 	export let props: Route
 </script>
 
-<a href={props.path}>{props.name}</a>
+<a class={`nav-link ${props.path === $currentRoute?.path ? 'text-blue-600' : ''}`} href={props.path}>{props.name}</a>
