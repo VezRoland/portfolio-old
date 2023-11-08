@@ -3,8 +3,8 @@
 	import NavbarLink from './NavbarLink.svelte'
 </script>
 
-<nav class="sticky w-[6rem] h-screen p-3">
-	<div class="h-full flex flex-col items-center gap-10 py-10 rounded-lg border border-zinc-700 bg-zinc-800">
+<nav class="sticky w-full flex justify-center p-3">
+	<div class="w-full flex items-center gap-10 px-10 py-5 rounded-lg border border-zinc-700 bg-zinc-800">
 		{#each $routes as props}
 			<NavbarLink {props} />
 		{/each}

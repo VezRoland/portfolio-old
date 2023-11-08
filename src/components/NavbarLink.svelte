@@ -3,4 +3,4 @@
 	export let props: Route
 </script>
 
-<a class={`nav-link ${props.path === $currentRoute?.path ? 'text-blue-600' : ''}`} href={props.path}>{props.name}</a>
+<a class={`${props.path === $currentRoute?.path ? 'text-sky-300' : 'text-white'}`} href={props.path}>{props.name}</a>

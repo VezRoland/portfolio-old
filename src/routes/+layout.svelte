@@ -10,7 +10,7 @@
 	<title>{$currentRoute?.name}</title>
 </svelte:head>
 
-<div class="flex">
+<div class="flex flex-col">
 	<Navbar/>
 	<slot/>
 </div>
