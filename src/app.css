@@ -2,6 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
+@layer base {
+  @font-face {
+    font-family: 'Poppins';
+    src: url('./fonts/Poppins-Regular.ttf');
+    font-style: normal;
+    font-weight: 400;
+  }
+
+  @font-face {
+    font-family: 'Poppins';
+    src: url('./fonts/Poppins-Bold.ttf');
+    font-style: normal;
+    font-weight: 700;
+  }
+}
+
 body {
-	@apply bg-zinc-900
+	@apply font-poppins bg-zinc-900
 }
