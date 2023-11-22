@@ -2,7 +2,7 @@
   import Icon from '@iconify/svelte'
 </script>
 
-<header class="h-screen grid place-items-center">
+<header class="h-[100svh] grid place-items-center">
   <section class="max-w-6xl flex flex-col-reverse md:flex-row gap-12 px-12">
     <div class="flex flex-col gap-6 py-12">
       <h1 class="text-[min(10vw,4.5rem)] font-bold text-white">Vezsenyi Roland</h1>
