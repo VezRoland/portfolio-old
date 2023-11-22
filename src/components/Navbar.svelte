@@ -6,7 +6,7 @@
   let open = false
 </script>
 
-<nav class="z-20 fixed top-0 w-full flex justify-between items-center px-12 py-6 text-lg text-white bg-zinc-900/75 backdrop-blur-lg">
+<nav class="z-20 sticky top-0 w-full flex justify-between items-center px-12 py-6 text-lg text-white bg-zinc-900/75 backdrop-blur-lg">
   <a class="z-10 font-bold" href="/">Roland</a>
   <button class="z-10 md:hidden" on:click={() => open = !open}>
     <Icon class="text-3xl" icon={`material-symbols:${open ? 'close-rounded' : 'menu-rounded'}`} />
