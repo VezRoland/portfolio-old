@@ -11,6 +11,5 @@
 </svelte:head>
 
 <div class="flex flex-col">
-	<Navbar/>
 	<slot/>
 </div>
