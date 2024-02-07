@@ -27,7 +27,7 @@
     <rect id="rect" x="0" y="0" width="100%" height="100%" fill="url(#pattern-circles)"></rect>
   </div>
 
-  <a class="absolute right-12 bottom-12 p-3 rounded-full bg-indigo-900" href="#explore">
+  <a class="absolute right-12 bottom-12 p-3 rounded-full bg-indigo-900 animate-bounce" href="#explore">
     <Icon class="text-3xl text-white" icon="material-symbols:keyboard-double-arrow-down-rounded" />
   </a>
 </header>

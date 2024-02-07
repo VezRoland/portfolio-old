@@ -5,17 +5,15 @@
 
 <main class="h-screen grid place-items-center" id="explore">
 	{#if data.projects.length > 0}
-		<div class="max-w-6xl grid grid-cols-3 gap-8 p-8">
+		<div class="projects">
 			{#each data.projects as { images, name, descr, hosted, github }}
-				<article class="flex flex-col shadow-lg text-white">
-					<img class="h-64 object-cover rounded-t-lg" src={images[0]} alt="thumbnail">
-					<div class="flex flex-col gap-4 p-4 rounded-b-lg bg-zinc-800/25 backdrop-blur-xl">
-						<h2 class="text-xl font-semibold">{name}</h2>
-						<p>{descr}</p>
-						<div class="flex gap-2">
-							<a class="flex-1 p-3 rounded-md bg-indigo-900" href={hosted}><Icon class="mx-auto text-lg text-white" icon="material-symbols:visibility-rounded" /></a>
-							<a class="flex-1 p-3 rounded-md bg-indigo-900" href={github}><Icon class="mx-auto text-lg text-white" icon="material-symbols:code-blocks-rounded" /></a>
-						</div>
+				<article class="project">
+					<img class="w-full h-full object-cover rounded-t-lg" src={images[0]} alt="thumbnail">
+					<h2 class="px-6 text-xl font-semibold text-white">{name}</h2>
+					<p class="px-6 text-zinc-400">{descr}</p>
+					<div class="flex gap-2 px-6 pb-6">
+						<a class="flex-1 p-3 rounded-md bg-indigo-900" href={hosted}><Icon class="mx-auto text-lg text-white" icon="material-symbols:visibility-rounded" /></a>
+						<a class="flex-1 p-3 rounded-md bg-indigo-900" href={github}><Icon class="mx-auto text-lg text-white" icon="material-symbols:code-blocks-rounded" /></a>
 					</div>
 				</article>
 			{/each}
