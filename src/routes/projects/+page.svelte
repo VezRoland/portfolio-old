@@ -1,21 +1,12 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
-	import { getApp } from '$lib/firebase/firebase.client'
-  import { getFirestore, getDocs, collection, type DocumentData } from 'firebase/firestore'
 	import Icon from '@iconify/svelte'
-
-	const db = getFirestore(getApp())
-	let projects: DocumentData[] = []
-
-	getDocs(collection(db, '/projects')).then(coll => {
-		coll.forEach(c => projects = [...projects, c.data()])
-	})
+	export let data
 </script>
 
 <main class="h-screen grid place-items-center" id="explore">
-	{#if projects.length > 0}
-		<div class="max-w-6xl grid grid-cols-3 p-8">
-			{#each projects as { images, name, descr, hosted, github }}
+	{#if data.projects.length > 0}
+		<div class="max-w-6xl grid grid-cols-3 gap-8 p-8">
+			{#each data.projects as { images, name, descr, hosted, github }}
 				<article class="flex flex-col shadow-lg text-white">
 					<img class="h-64 object-cover rounded-t-lg" src={images[0]} alt="thumbnail">
 					<div class="flex flex-col gap-4 p-4 rounded-b-lg bg-zinc-800/25 backdrop-blur-xl">
